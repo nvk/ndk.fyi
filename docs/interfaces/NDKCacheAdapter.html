@@ -20,7 +20,7 @@
 <ul class="tsd-hierarchy">
 <li><span class="target">NDKCacheAdapter</span></li></ul></section><aside class="tsd-sources">
 <ul>
-<li>Defined in <a href="https://github.com/nostr-dev-kit/ndk/blob/33d9e86/src/cache/index.ts#L4">src/nostr/nostr-dev-kit/ndk/src/cache/index.ts:4</a></li></ul></aside>
+<li>Defined in <a href="https://github.com/nostr-dev-kit/ndk/blob/411c47f/src/cache/index.ts#L5">src/nostr/nostr-dev-kit/ndk/src/cache/index.ts:5</a></li></ul></aside>
 <section class="tsd-panel-group tsd-index-group">
 <section class="tsd-panel tsd-index-panel">
 <details class="tsd-index-content tsd-index-accordion" open><summary class="tsd-accordion-summary tsd-index-summary">
@@ -46,7 +46,7 @@ When this is false, the cache will be queried in addition to the relays.</p>
 </div>
 <div class="tsd-comment tsd-typography"></div><aside class="tsd-sources">
 <ul>
-<li>Defined in <a href="https://github.com/nostr-dev-kit/ndk/blob/33d9e86/src/cache/index.ts#L10">src/nostr/nostr-dev-kit/ndk/src/cache/index.ts:10</a></li></ul></aside></section></section>
+<li>Defined in <a href="https://github.com/nostr-dev-kit/ndk/blob/411c47f/src/cache/index.ts#L11">src/nostr/nostr-dev-kit/ndk/src/cache/index.ts:11</a></li></ul></aside></section></section>
 <section class="tsd-panel-group tsd-member-group">
 <h2>Methods</h2>
 <section class="tsd-panel tsd-member"><a id="query" class="tsd-anchor"></a>
@@ -61,11 +61,11 @@ When this is false, the cache will be queried in addition to the relays.</p>
 <h5><span class="tsd-kind-parameter">subscription</span>: <a href="../classes/NDKSubscription.html" class="tsd-signature-type tsd-kind-class">NDKSubscription</a></h5></li></ul></div>
 <h4 class="tsd-returns-title">Returns <span class="tsd-signature-type ">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">void</span><span class="tsd-signature-symbol">&gt;</span></h4><aside class="tsd-sources">
 <ul>
-<li>Defined in <a href="https://github.com/nostr-dev-kit/ndk/blob/33d9e86/src/cache/index.ts#L12">src/nostr/nostr-dev-kit/ndk/src/cache/index.ts:12</a></li></ul></aside></li></ul></section>
+<li>Defined in <a href="https://github.com/nostr-dev-kit/ndk/blob/411c47f/src/cache/index.ts#L13">src/nostr/nostr-dev-kit/ndk/src/cache/index.ts:13</a></li></ul></aside></li></ul></section>
 <section class="tsd-panel tsd-member"><a id="setEvent" class="tsd-anchor"></a>
 <h3 class="tsd-anchor-link"><span>set<wbr/>Event</span><a href="#setEvent" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24"><use href="#icon-anchor"></use></svg></a></h3>
 <ul class="tsd-signatures">
-<li class="tsd-signature tsd-anchor-link" id="setEvent.setEvent-1"><span class="tsd-kind-call-signature">set<wbr/>Event</span><span class="tsd-signature-symbol">(</span><span class="tsd-kind-parameter">event</span><span class="tsd-signature-symbol">: </span><a href="../classes/NDKEvent.html" class="tsd-signature-type tsd-kind-class">NDKEvent</a>, <span class="tsd-kind-parameter">filter</span><span class="tsd-signature-symbol">: </span><a href="../types/NDKFilter.html" class="tsd-signature-type tsd-kind-type-alias">NDKFilter</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type ">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">void</span><span class="tsd-signature-symbol">&gt;</span><a href="#setEvent.setEvent-1" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24"><use href="#icon-anchor"></use></svg></a></li>
+<li class="tsd-signature tsd-anchor-link" id="setEvent.setEvent-1"><span class="tsd-kind-call-signature">set<wbr/>Event</span><span class="tsd-signature-symbol">(</span><span class="tsd-kind-parameter">event</span><span class="tsd-signature-symbol">: </span><a href="../classes/NDKEvent.html" class="tsd-signature-type tsd-kind-class">NDKEvent</a>, <span class="tsd-kind-parameter">filter</span><span class="tsd-signature-symbol">: </span><a href="../types/NDKFilter.html" class="tsd-signature-type tsd-kind-type-alias">NDKFilter</a>, <span class="tsd-kind-parameter">relay</span><span class="tsd-signature-symbol">?: </span><a href="../classes/NDKRelay.html" class="tsd-signature-type tsd-kind-class">NDKRelay</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type ">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">void</span><span class="tsd-signature-symbol">&gt;</span><a href="#setEvent.setEvent-1" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24"><use href="#icon-anchor"></use></svg></a></li>
 <li class="tsd-description">
 <div class="tsd-parameters">
 <h4 class="tsd-parameters-title">Parameters</h4>
@@ -73,10 +73,12 @@ When this is false, the cache will be queried in addition to the relays.</p>
 <li>
 <h5><span class="tsd-kind-parameter">event</span>: <a href="../classes/NDKEvent.html" class="tsd-signature-type tsd-kind-class">NDKEvent</a></h5></li>
 <li>
-<h5><span class="tsd-kind-parameter">filter</span>: <a href="../types/NDKFilter.html" class="tsd-signature-type tsd-kind-type-alias">NDKFilter</a></h5></li></ul></div>
+<h5><span class="tsd-kind-parameter">filter</span>: <a href="../types/NDKFilter.html" class="tsd-signature-type tsd-kind-type-alias">NDKFilter</a></h5></li>
+<li>
+<h5><code class="tsd-tag ts-flagOptional">Optional</code> <span class="tsd-kind-parameter">relay</span>: <a href="../classes/NDKRelay.html" class="tsd-signature-type tsd-kind-class">NDKRelay</a></h5></li></ul></div>
 <h4 class="tsd-returns-title">Returns <span class="tsd-signature-type ">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">void</span><span class="tsd-signature-symbol">&gt;</span></h4><aside class="tsd-sources">
 <ul>
-<li>Defined in <a href="https://github.com/nostr-dev-kit/ndk/blob/33d9e86/src/cache/index.ts#L13">src/nostr/nostr-dev-kit/ndk/src/cache/index.ts:13</a></li></ul></aside></li></ul></section></section></div>
+<li>Defined in <a href="https://github.com/nostr-dev-kit/ndk/blob/411c47f/src/cache/index.ts#L14">src/nostr/nostr-dev-kit/ndk/src/cache/index.ts:14</a></li></ul></aside></li></ul></section></section></div>
 <div class="col-sidebar">
 <div class="page-menu">
 <div class="tsd-navigation settings">
@@ -130,7 +132,6 @@ When this is false, the cache will be queried in addition to the relays.</p>
 <li><a href="IEventHandlingStrategy.html"><svg class="tsd-kind-icon" viewBox="0 0 24 24"><use href="#icon-256"></use></svg><span>IEvent<wbr/>Handling<wbr/>Strategy</span></a></li>
 <li><a href="NDKCacheAdapter.html" class="current"><svg class="tsd-kind-icon" viewBox="0 0 24 24"><use href="#icon-256"></use></svg><span>NDKCache<wbr/>Adapter</span></a></li>
 <li><a href="NDKConstructorParams.html"><svg class="tsd-kind-icon" viewBox="0 0 24 24"><use href="#icon-256"></use></svg><span>NDKConstructor<wbr/>Params</span></a></li>
-<li><a href="NDKFilterOptions.html"><svg class="tsd-kind-icon" viewBox="0 0 24 24"><use href="#icon-256"></use></svg><span>NDKFilter<wbr/>Options</span></a></li>
 <li><a href="NDKRelayConnectionStats.html"><svg class="tsd-kind-icon" viewBox="0 0 24 24"><use href="#icon-256"></use></svg><span>NDKRelay<wbr/>Connection<wbr/>Stats</span></a></li>
 <li><a href="NDKRpcRequest.html"><svg class="tsd-kind-icon" viewBox="0 0 24 24"><use href="#icon-256"></use></svg><span>NDKRpc<wbr/>Request</span></a></li>
 <li><a href="NDKRpcResponse.html"><svg class="tsd-kind-icon" viewBox="0 0 24 24"><use href="#icon-256"></use></svg><span>NDKRpc<wbr/>Response</span></a></li>

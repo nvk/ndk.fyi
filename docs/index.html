@@ -70,7 +70,7 @@ that runs on the server define the <code>DEBUG</code> envionment variable like</
 <li>Signing Adapters<ul>
 <li><input checked="" disabled="" type="checkbox"> Private key</li>
 <li><input checked="" disabled="" type="checkbox"> NIP-07</li>
-<li><input disabled="" type="checkbox"> NIP-26</li>
+<li>[!] <del>NIP-26</del> Won&#39;t add / NIP-26 is dead</li>
 <li><input checked="" disabled="" type="checkbox"> NIP-46<ul>
 <li><input checked="" disabled="" type="checkbox"> Permission tokens</li>
 </ul>
@@ -86,6 +86,7 @@ that runs on the server define the <code>DEBUG</code> envionment variable like</
 </li>
 <li><input disabled="" type="checkbox"> nostr-tools/SimplePool drop-in replacement interface</li>
 </ul>
+<a id="md:read-world-uses-of-ndk" class="tsd-anchor"></a><h2><a href="#md:read-world-uses-of-ndk">Read-world uses of NDK</a></h2><p>See <a href="./REFERENCES.md">REFERENCES.md</a> for a list of projects using NDK to see how others are using it.</p>
 <a id="md:instantiate-an-ndk-instance" class="tsd-anchor"></a><h2><a href="#md:instantiate-an-ndk-instance">Instantiate an NDK instance</a></h2><p>You can pass an object with several options to a newly created instance of NDK.</p>
 <ul>
 <li><code>explicitRelayUrls</code> – an array of relay URLs.</li>
@@ -168,7 +169,7 @@ subscription to remain active beyond <code>EOSE</code>, you should set it to <co
 </code><button>Copy</button></pre>
 <a id="md:reacting-to-an-event" class="tsd-anchor"></a><h3><a href="#md:reacting-to-an-event">Reacting to an event</a></h3><pre><code class="language-ts"><span class="hl-6">// Find the first event from @jack, and react/like it.</span><br/><span class="hl-3">const</span><span class="hl-1"> </span><span class="hl-4">event</span><span class="hl-1"> = </span><span class="hl-7">await</span><span class="hl-1"> </span><span class="hl-5">ndk</span><span class="hl-1">.</span><span class="hl-0">fetchEvent</span><span class="hl-1">({ </span><span class="hl-5">author:</span><span class="hl-1"> </span><span class="hl-2">&quot;jack@cashapp.com&quot;</span><span class="hl-1"> })[</span><span class="hl-8">0</span><span class="hl-1">];</span><br/><span class="hl-7">await</span><span class="hl-1"> </span><span class="hl-5">event</span><span class="hl-1">.</span><span class="hl-0">react</span><span class="hl-1">(</span><span class="hl-2">&quot;🤙&quot;</span><span class="hl-1">);</span>
 </code><button>Copy</button></pre>
-<a id="md:zap-an-event" class="tsd-anchor"></a><h3><a href="#md:zap-an-event">Zap an event</a></h3><pre><code class="language-ts"><span class="hl-6">// Find the first event from @jack, and zap it.</span><br/><span class="hl-3">const</span><span class="hl-1"> </span><span class="hl-4">event</span><span class="hl-1"> = </span><span class="hl-7">await</span><span class="hl-1"> </span><span class="hl-5">ndk</span><span class="hl-1">.</span><span class="hl-0">fetchEvent</span><span class="hl-1">({ </span><span class="hl-5">author:</span><span class="hl-1"> </span><span class="hl-2">&quot;jack@cashapp.com&quot;</span><span class="hl-1"> })[</span><span class="hl-8">0</span><span class="hl-1">];</span><br/><span class="hl-7">await</span><span class="hl-1"> </span><span class="hl-5">event</span><span class="hl-1">.</span><span class="hl-0">zap</span><span class="hl-1">(</span><span class="hl-8">1337</span><span class="hl-1">, </span><span class="hl-2">&quot;Zapping your post!&quot;</span><span class="hl-1">); </span><span class="hl-6">// Returns a zap request</span>
+<a id="md:zap-an-event" class="tsd-anchor"></a><h3><a href="#md:zap-an-event">Zap an event</a></h3><pre><code class="language-ts"><span class="hl-6">// Find the first event from @jack, and zap it.</span><br/><span class="hl-3">const</span><span class="hl-1"> </span><span class="hl-4">event</span><span class="hl-1"> = </span><span class="hl-7">await</span><span class="hl-1"> </span><span class="hl-5">ndk</span><span class="hl-1">.</span><span class="hl-0">fetchEvent</span><span class="hl-1">({ </span><span class="hl-5">author:</span><span class="hl-1"> </span><span class="hl-2">&quot;jack@cashapp.com&quot;</span><span class="hl-1"> })[</span><span class="hl-8">0</span><span class="hl-1">];</span><br/><span class="hl-7">await</span><span class="hl-1"> </span><span class="hl-5">event</span><span class="hl-1">.</span><span class="hl-0">zap</span><span class="hl-1">(</span><span class="hl-8">1337</span><span class="hl-1">, </span><span class="hl-2">&quot;Zapping your post!&quot;</span><span class="hl-1">); </span><span class="hl-6">// Returns a bolt11 payment request</span>
 </code><button>Copy</button></pre>
 <a id="md:architecture-decisions-amp-suggestions" class="tsd-anchor"></a><h2><a href="#md:architecture-decisions-amp-suggestions">Architecture decisions &amp; suggestions</a></h2><ul>
 <li>Users of NDK should instantiate a single NDK instance.</li>
@@ -207,6 +208,7 @@ subscription to remain active beyond <code>EOSE</code>, you should set it to <co
 <ul>
 <li><a href="#md:ndk-nip-28-group-chat"><span>NDK NIP-<wbr/>28 group chat</span></a></li></ul></li>
 <li><a href="#md:features"><span>Features</span></a></li>
+<li><a href="#md:read-world-uses-of-ndk"><span>Read-<wbr/>world uses of NDK</span></a></li>
 <li><a href="#md:instantiate-an-ndk-instance"><span>Instantiate an NDK instance</span></a></li>
 <li><a href="#md:connecting"><span>Connecting</span></a></li>
 <li><a href="#md:signers"><span>Signers</span></a></li>
@@ -265,7 +267,6 @@ subscription to remain active beyond <code>EOSE</code>, you should set it to <co
 <li><a href="interfaces/IEventHandlingStrategy.html"><svg class="tsd-kind-icon" viewBox="0 0 24 24"><use href="#icon-256"></use></svg><span>IEvent<wbr/>Handling<wbr/>Strategy</span></a></li>
 <li><a href="interfaces/NDKCacheAdapter.html"><svg class="tsd-kind-icon" viewBox="0 0 24 24"><use href="#icon-256"></use></svg><span>NDKCache<wbr/>Adapter</span></a></li>
 <li><a href="interfaces/NDKConstructorParams.html"><svg class="tsd-kind-icon" viewBox="0 0 24 24"><use href="#icon-256"></use></svg><span>NDKConstructor<wbr/>Params</span></a></li>
-<li><a href="interfaces/NDKFilterOptions.html"><svg class="tsd-kind-icon" viewBox="0 0 24 24"><use href="#icon-256"></use></svg><span>NDKFilter<wbr/>Options</span></a></li>
 <li><a href="interfaces/NDKRelayConnectionStats.html"><svg class="tsd-kind-icon" viewBox="0 0 24 24"><use href="#icon-256"></use></svg><span>NDKRelay<wbr/>Connection<wbr/>Stats</span></a></li>
 <li><a href="interfaces/NDKRpcRequest.html"><svg class="tsd-kind-icon" viewBox="0 0 24 24"><use href="#icon-256"></use></svg><span>NDKRpc<wbr/>Request</span></a></li>
 <li><a href="interfaces/NDKRpcResponse.html"><svg class="tsd-kind-icon" viewBox="0 0 24 24"><use href="#icon-256"></use></svg><span>NDKRpc<wbr/>Response</span></a></li>
