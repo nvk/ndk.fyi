@@ -1,4 +1,4 @@
-<!DOCTYPE html><html class="default" lang="en"><head><meta charSet="utf-8"/><meta http-equiv="x-ua-compatible" content="IE=edge"/><title>NDKRelaySet | NDK</title><meta name="description" content="Documentation for NDK"/><meta name="viewport" content="width=device-width, initial-scale=1"/><link rel="stylesheet" href="../assets/style.css"/><link rel="stylesheet" href="../assets/highlight.css"/><link rel="stylesheet" href="../assets/custom.css"/><script defer src="../assets/main.js"></script><script async src="../assets/search.js" id="tsd-search-script"></script><script async src="../assets/navigation.js" id="tsd-nav-script"></script></head><body><script>document.documentElement.dataset.theme = localStorage.getItem("tsd-theme") || "os"</script><header class="tsd-page-toolbar">
+<!DOCTYPE html><html class="default" lang="en"><head><meta charSet="utf-8"/><meta http-equiv="x-ua-compatible" content="IE=edge"/><title>NDKSimpleGroup | NDK</title><meta name="description" content="Documentation for NDK"/><meta name="viewport" content="width=device-width, initial-scale=1"/><link rel="stylesheet" href="../assets/style.css"/><link rel="stylesheet" href="../assets/highlight.css"/><link rel="stylesheet" href="../assets/custom.css"/><script defer src="../assets/main.js"></script><script async src="../assets/search.js" id="tsd-search-script"></script><script async src="../assets/navigation.js" id="tsd-nav-script"></script></head><body><script>document.documentElement.dataset.theme = localStorage.getItem("tsd-theme") || "os"</script><header class="tsd-page-toolbar">
 <div class="tsd-toolbar-contents container">
 <div class="table-cell" id="tsd-search" data-base="..">
 <div class="field"><label for="tsd-search-field" class="tsd-widget tsd-toolbar-icon search no-caption"><svg width="16" height="16" viewBox="0 0 16 16" fill="none"><use href="#icon-search"></use></svg></label><input type="text" id="tsd-search-field" aria-label="Search"/></div>
@@ -13,21 +13,14 @@
 <div class="tsd-page-title">
 <ul class="tsd-breadcrumb">
 <li><a href="../modules.html">NDK</a></li>
-<li><a href="NDKRelaySet.html">NDKRelaySet</a></li></ul>
-<h1>Class NDKRelaySet</h1></div>
-<section class="tsd-panel tsd-comment">
-<div class="tsd-comment tsd-typography"><p>A relay set is a group of relays. This grouping can be short-living, for a single
-REQ or can be long-lasting, for example for the explicit relay list the user
-has specified.</p>
-<p>Requests to relays should be sent through this interface.</p>
-</div>
-<div class="tsd-comment tsd-typography"></div></section>
+<li><a href="NDKSimpleGroup.html">NDKSimpleGroup</a></li></ul>
+<h1>Class NDKSimpleGroup</h1></div>
 <section class="tsd-panel tsd-hierarchy">
 <h4>Hierarchy</h4>
 <ul class="tsd-hierarchy">
-<li><span class="target">NDKRelaySet</span></li></ul></section><aside class="tsd-sources">
+<li><span class="target">NDKSimpleGroup</span></li></ul></section><aside class="tsd-sources">
 <ul>
-<li>Defined in <a href="https://github.com/nostr-dev-kit/ndk/blob/4f982c4/ndk/src/relay/sets/index.ts#L12">packages/ndk/ndk/src/relay/sets/index.ts:12</a></li></ul></aside>
+<li>Defined in <a href="https://github.com/nostr-dev-kit/ndk/blob/4f982c4/ndk/src/events/kinds/simple-group/index.ts#L32">packages/ndk/ndk/src/events/kinds/simple-group/index.ts:32</a></li></ul></aside>
 <section class="tsd-panel-group tsd-index-group">
 <section class="tsd-panel tsd-index-panel">
 <details class="tsd-index-content tsd-index-accordion" open><summary class="tsd-accordion-summary tsd-index-summary">
@@ -35,117 +28,131 @@ has specified.</p>
 <div class="tsd-accordion-details">
 <section class="tsd-index-section">
 <h3 class="tsd-index-heading">Constructors</h3>
-<div class="tsd-index-list"><a href="NDKRelaySet.html#constructor" class="tsd-index-link"><svg class="tsd-kind-icon" viewBox="0 0 24 24"><use href="#icon-512"></use></svg><span>constructor</span></a>
+<div class="tsd-index-list"><a href="NDKSimpleGroup.html#constructor" class="tsd-index-link"><svg class="tsd-kind-icon" viewBox="0 0 24 24"><use href="#icon-512"></use></svg><span>constructor</span></a>
 </div></section>
 <section class="tsd-index-section">
 <h3 class="tsd-index-heading">Properties</h3>
-<div class="tsd-index-list"><a href="NDKRelaySet.html#relays" class="tsd-index-link"><svg class="tsd-kind-icon" viewBox="0 0 24 24"><use href="#icon-1024"></use></svg><span>relays</span></a>
+<div class="tsd-index-list"><a href="NDKSimpleGroup.html#groupId" class="tsd-index-link"><svg class="tsd-kind-icon" viewBox="0 0 24 24"><use href="#icon-1024"></use></svg><span>group<wbr/>Id</span></a>
+<a href="NDKSimpleGroup.html#relaySet" class="tsd-index-link"><svg class="tsd-kind-icon" viewBox="0 0 24 24"><use href="#icon-1024"></use></svg><span>relay<wbr/>Set</span></a>
 </div></section>
 <section class="tsd-index-section">
 <h3 class="tsd-index-heading">Methods</h3>
-<div class="tsd-index-list"><a href="NDKRelaySet.html#addRelay" class="tsd-index-link"><svg class="tsd-kind-icon" viewBox="0 0 24 24"><use href="#icon-2048"></use></svg><span>add<wbr/>Relay</span></a>
-<a href="NDKRelaySet.html#publish" class="tsd-index-link"><svg class="tsd-kind-icon" viewBox="0 0 24 24"><use href="#icon-2048"></use></svg><span>publish</span></a>
-<a href="NDKRelaySet.html#size" class="tsd-index-link"><svg class="tsd-kind-icon" viewBox="0 0 24 24"><use href="#icon-2048"></use></svg><span>size</span></a>
-<a href="NDKRelaySet.html#fromRelayUrls" class="tsd-index-link"><svg class="tsd-kind-icon" viewBox="0 0 24 24"><use href="#icon-2048"></use></svg><span>from<wbr/>Relay<wbr/>Urls</span></a>
+<div class="tsd-index-list"><a href="NDKSimpleGroup.html#addUser" class="tsd-index-link"><svg class="tsd-kind-icon" viewBox="0 0 24 24"><use href="#icon-2048"></use></svg><span>add<wbr/>User</span></a>
+<a href="NDKSimpleGroup.html#getMemberListEvent" class="tsd-index-link"><svg class="tsd-kind-icon" viewBox="0 0 24 24"><use href="#icon-2048"></use></svg><span>get<wbr/>Member<wbr/>List<wbr/>Event</span></a>
+<a href="NDKSimpleGroup.html#generateAddUserEvent" class="tsd-index-link"><svg class="tsd-kind-icon" viewBox="0 0 24 24"><use href="#icon-2048"></use></svg><span>generate<wbr/>Add<wbr/>User<wbr/>Event</span></a>
+<a href="NDKSimpleGroup.html#generateUserListEvent" class="tsd-index-link"><svg class="tsd-kind-icon" viewBox="0 0 24 24"><use href="#icon-2048"></use></svg><span>generate<wbr/>User<wbr/>List<wbr/>Event</span></a>
 </div></section></div></details></section></section>
 <section class="tsd-panel-group tsd-member-group">
 <h2>Constructors</h2>
 <section class="tsd-panel tsd-member"><a id="constructor" class="tsd-anchor"></a>
 <h3 class="tsd-anchor-link"><span>constructor</span><a href="#constructor" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24"><use href="#icon-anchor"></use></svg></a></h3>
 <ul class="tsd-signatures">
-<li class="tsd-signature tsd-anchor-link" id="constructor.new_NDKRelaySet"><span class="tsd-kind-constructor-signature">new NDKRelay<wbr/>Set</span><span class="tsd-signature-symbol">(</span><span class="tsd-kind-parameter">relays</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type ">Set</span><span class="tsd-signature-symbol">&lt;</span><a href="NDKRelay.html" class="tsd-signature-type tsd-kind-class">NDKRelay</a><span class="tsd-signature-symbol">&gt;</span>, <span class="tsd-kind-parameter">ndk</span><span class="tsd-signature-symbol">: </span><a href="default.html" class="tsd-signature-type tsd-kind-class">default</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="NDKRelaySet.html" class="tsd-signature-type tsd-kind-class">NDKRelaySet</a><a href="#constructor.new_NDKRelaySet" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24"><use href="#icon-anchor"></use></svg></a></li>
+<li class="tsd-signature tsd-anchor-link" id="constructor.new_NDKSimpleGroup"><span class="tsd-kind-constructor-signature">new NDKSimple<wbr/>Group</span><span class="tsd-signature-symbol">(</span><span class="tsd-kind-parameter">ndk</span><span class="tsd-signature-symbol">: </span><a href="default.html" class="tsd-signature-type tsd-kind-class">default</a>, <span class="tsd-kind-parameter">groupId</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span>, <span class="tsd-kind-parameter">relaySet</span><span class="tsd-signature-symbol">: </span><a href="NDKRelaySet.html" class="tsd-signature-type tsd-kind-class">NDKRelaySet</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="NDKSimpleGroup.html" class="tsd-signature-type tsd-kind-class">NDKSimpleGroup</a><a href="#constructor.new_NDKSimpleGroup" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24"><use href="#icon-anchor"></use></svg></a></li>
 <li class="tsd-description">
 <div class="tsd-parameters">
 <h4 class="tsd-parameters-title">Parameters</h4>
 <ul class="tsd-parameter-list">
 <li>
-<h5><span class="tsd-kind-parameter">relays</span>: <span class="tsd-signature-type ">Set</span><span class="tsd-signature-symbol">&lt;</span><a href="NDKRelay.html" class="tsd-signature-type tsd-kind-class">NDKRelay</a><span class="tsd-signature-symbol">&gt;</span></h5></li>
+<h5><span class="tsd-kind-parameter">ndk</span>: <a href="default.html" class="tsd-signature-type tsd-kind-class">default</a></h5></li>
 <li>
-<h5><span class="tsd-kind-parameter">ndk</span>: <a href="default.html" class="tsd-signature-type tsd-kind-class">default</a></h5></li></ul></div>
-<h4 class="tsd-returns-title">Returns <a href="NDKRelaySet.html" class="tsd-signature-type tsd-kind-class">NDKRelaySet</a></h4><aside class="tsd-sources">
+<h5><span class="tsd-kind-parameter">groupId</span>: <span class="tsd-signature-type">string</span></h5></li>
+<li>
+<h5><span class="tsd-kind-parameter">relaySet</span>: <a href="NDKRelaySet.html" class="tsd-signature-type tsd-kind-class">NDKRelaySet</a></h5></li></ul></div>
+<h4 class="tsd-returns-title">Returns <a href="NDKSimpleGroup.html" class="tsd-signature-type tsd-kind-class">NDKSimpleGroup</a></h4><aside class="tsd-sources">
 <ul>
-<li>Defined in <a href="https://github.com/nostr-dev-kit/ndk/blob/4f982c4/ndk/src/relay/sets/index.ts#L17">packages/ndk/ndk/src/relay/sets/index.ts:17</a></li></ul></aside></li></ul></section></section>
+<li>Defined in <a href="https://github.com/nostr-dev-kit/ndk/blob/4f982c4/ndk/src/events/kinds/simple-group/index.ts#L37">packages/ndk/ndk/src/events/kinds/simple-group/index.ts:37</a></li></ul></aside></li></ul></section></section>
 <section class="tsd-panel-group tsd-member-group">
 <h2>Properties</h2>
-<section class="tsd-panel tsd-member"><a id="relays" class="tsd-anchor"></a>
-<h3 class="tsd-anchor-link"><code class="tsd-tag ts-flagReadonly">Readonly</code> <span>relays</span><a href="#relays" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24"><use href="#icon-anchor"></use></svg></a></h3>
-<div class="tsd-signature"><span class="tsd-kind-property">relays</span><span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type ">Set</span><span class="tsd-signature-symbol">&lt;</span><a href="NDKRelay.html" class="tsd-signature-type tsd-kind-class">NDKRelay</a><span class="tsd-signature-symbol">&gt;</span></div><aside class="tsd-sources">
+<section class="tsd-panel tsd-member"><a id="groupId" class="tsd-anchor"></a>
+<h3 class="tsd-anchor-link"><code class="tsd-tag ts-flagReadonly">Readonly</code> <span>group<wbr/>Id</span><a href="#groupId" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24"><use href="#icon-anchor"></use></svg></a></h3>
+<div class="tsd-signature"><span class="tsd-kind-property">group<wbr/>Id</span><span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span></div><aside class="tsd-sources">
 <ul>
-<li>Defined in <a href="https://github.com/nostr-dev-kit/ndk/blob/4f982c4/ndk/src/relay/sets/index.ts#L13">packages/ndk/ndk/src/relay/sets/index.ts:13</a></li></ul></aside></section></section>
+<li>Defined in <a href="https://github.com/nostr-dev-kit/ndk/blob/4f982c4/ndk/src/events/kinds/simple-group/index.ts#L34">packages/ndk/ndk/src/events/kinds/simple-group/index.ts:34</a></li></ul></aside></section>
+<section class="tsd-panel tsd-member"><a id="relaySet" class="tsd-anchor"></a>
+<h3 class="tsd-anchor-link"><code class="tsd-tag ts-flagReadonly">Readonly</code> <span>relay<wbr/>Set</span><a href="#relaySet" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24"><use href="#icon-anchor"></use></svg></a></h3>
+<div class="tsd-signature"><span class="tsd-kind-property">relay<wbr/>Set</span><span class="tsd-signature-symbol">:</span> <a href="NDKRelaySet.html" class="tsd-signature-type tsd-kind-class">NDKRelaySet</a></div><aside class="tsd-sources">
+<ul>
+<li>Defined in <a href="https://github.com/nostr-dev-kit/ndk/blob/4f982c4/ndk/src/events/kinds/simple-group/index.ts#L35">packages/ndk/ndk/src/events/kinds/simple-group/index.ts:35</a></li></ul></aside></section></section>
 <section class="tsd-panel-group tsd-member-group">
 <h2>Methods</h2>
-<section class="tsd-panel tsd-member"><a id="addRelay" class="tsd-anchor"></a>
-<h3 class="tsd-anchor-link"><span>add<wbr/>Relay</span><a href="#addRelay" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24"><use href="#icon-anchor"></use></svg></a></h3>
+<section class="tsd-panel tsd-member"><a id="addUser" class="tsd-anchor"></a>
+<h3 class="tsd-anchor-link"><span>add<wbr/>User</span><a href="#addUser" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24"><use href="#icon-anchor"></use></svg></a></h3>
 <ul class="tsd-signatures">
-<li class="tsd-signature tsd-anchor-link" id="addRelay.addRelay-1"><span class="tsd-kind-call-signature">add<wbr/>Relay</span><span class="tsd-signature-symbol">(</span><span class="tsd-kind-parameter">relay</span><span class="tsd-signature-symbol">: </span><a href="NDKRelay.html" class="tsd-signature-type tsd-kind-class">NDKRelay</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span><a href="#addRelay.addRelay-1" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24"><use href="#icon-anchor"></use></svg></a></li>
+<li class="tsd-signature tsd-anchor-link" id="addUser.addUser-1"><span class="tsd-kind-call-signature">add<wbr/>User</span><span class="tsd-signature-symbol">(</span><span class="tsd-kind-parameter">user</span><span class="tsd-signature-symbol">: </span><a href="NDKUser.html" class="tsd-signature-type tsd-kind-class">NDKUser</a>, <span class="tsd-kind-parameter">opts</span><span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type ">AddUserOpts</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type ">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-symbol">{ </span><br/><span>    </span><span class="tsd-kind-property">addUserEvent</span><span class="tsd-signature-symbol">: </span><a href="NDKEvent.html" class="tsd-signature-type tsd-kind-class">NDKEvent</a><span class="tsd-signature-symbol">; </span><br/><span>    </span><span class="tsd-kind-property">currentUserListEvent</span><span class="tsd-signature-symbol">?: </span><a href="NDKEvent.html" class="tsd-signature-type tsd-kind-class">NDKEvent</a><span class="tsd-signature-symbol">; </span><br/><span class="tsd-signature-symbol">}</span><span class="tsd-signature-symbol">&gt;</span><a href="#addUser.addUser-1" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24"><use href="#icon-anchor"></use></svg></a></li>
 <li class="tsd-description">
-<div class="tsd-comment tsd-typography"><p>Adds a relay to this set.</p>
+<div class="tsd-comment tsd-typography"><p>Adds a user to the group.</p>
 </div>
 <div class="tsd-parameters">
 <h4 class="tsd-parameters-title">Parameters</h4>
 <ul class="tsd-parameter-list">
 <li>
-<h5><span class="tsd-kind-parameter">relay</span>: <a href="NDKRelay.html" class="tsd-signature-type tsd-kind-class">NDKRelay</a></h5></li></ul></div>
-<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>
-<div class="tsd-comment tsd-typography"></div><aside class="tsd-sources">
-<ul>
-<li>Defined in <a href="https://github.com/nostr-dev-kit/ndk/blob/4f982c4/ndk/src/relay/sets/index.ts#L26">packages/ndk/ndk/src/relay/sets/index.ts:26</a></li></ul></aside></li></ul></section>
-<section class="tsd-panel tsd-member"><a id="publish" class="tsd-anchor"></a>
-<h3 class="tsd-anchor-link"><span>publish</span><a href="#publish" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24"><use href="#icon-anchor"></use></svg></a></h3>
-<ul class="tsd-signatures">
-<li class="tsd-signature tsd-anchor-link" id="publish.publish-1"><span class="tsd-kind-call-signature">publish</span><span class="tsd-signature-symbol">(</span><span class="tsd-kind-parameter">event</span><span class="tsd-signature-symbol">: </span><a href="NDKEvent.html" class="tsd-signature-type tsd-kind-class">NDKEvent</a>, <span class="tsd-kind-parameter">timeoutMs</span><span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type ">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type ">Set</span><span class="tsd-signature-symbol">&lt;</span><a href="NDKRelay.html" class="tsd-signature-type tsd-kind-class">NDKRelay</a><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol">&gt;</span><a href="#publish.publish-1" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24"><use href="#icon-anchor"></use></svg></a></li>
-<li class="tsd-description">
-<div class="tsd-comment tsd-typography"><p>Publish an event to all relays in this set. Returns the number of relays that have received the event.</p>
-</div>
-<div class="tsd-parameters">
-<h4 class="tsd-parameters-title">Parameters</h4>
-<ul class="tsd-parameter-list">
-<li>
-<h5><span class="tsd-kind-parameter">event</span>: <a href="NDKEvent.html" class="tsd-signature-type tsd-kind-class">NDKEvent</a></h5>
-<div class="tsd-comment tsd-typography"></div></li>
-<li>
-<h5><code class="tsd-tag ts-flagOptional">Optional</code> <span class="tsd-kind-parameter">timeoutMs</span>: <span class="tsd-signature-type">number</span></h5>
-<div class="tsd-comment tsd-typography"><p>timeout in milliseconds for each publish operation and connection operation</p>
-</div>
-<div class="tsd-comment tsd-typography"></div></li></ul></div>
-<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type ">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type ">Set</span><span class="tsd-signature-symbol">&lt;</span><a href="NDKRelay.html" class="tsd-signature-type tsd-kind-class">NDKRelay</a><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol">&gt;</span></h4><p>A set where the event was successfully published to</p>
-
-<div class="tsd-comment tsd-typography"></div><aside class="tsd-sources">
-<ul>
-<li>Defined in <a href="https://github.com/nostr-dev-kit/ndk/blob/4f982c4/ndk/src/relay/sets/index.ts#L62">packages/ndk/ndk/src/relay/sets/index.ts:62</a></li></ul></aside></li></ul></section>
-<section class="tsd-panel tsd-member"><a id="size" class="tsd-anchor"></a>
-<h3 class="tsd-anchor-link"><span>size</span><a href="#size" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24"><use href="#icon-anchor"></use></svg></a></h3>
-<ul class="tsd-signatures">
-<li class="tsd-signature tsd-anchor-link" id="size.size-1"><span class="tsd-kind-call-signature">size</span><span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span><a href="#size.size-1" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24"><use href="#icon-anchor"></use></svg></a></li>
-<li class="tsd-description">
-<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">number</span></h4><aside class="tsd-sources">
-<ul>
-<li>Defined in <a href="https://github.com/nostr-dev-kit/ndk/blob/4f982c4/ndk/src/relay/sets/index.ts#L100">packages/ndk/ndk/src/relay/sets/index.ts:100</a></li></ul></aside></li></ul></section>
-<section class="tsd-panel tsd-member"><a id="fromRelayUrls" class="tsd-anchor"></a>
-<h3 class="tsd-anchor-link"><code class="tsd-tag ts-flagStatic">Static</code> <span>from<wbr/>Relay<wbr/>Urls</span><a href="#fromRelayUrls" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24"><use href="#icon-anchor"></use></svg></a></h3>
-<ul class="tsd-signatures">
-<li class="tsd-signature tsd-anchor-link" id="fromRelayUrls.fromRelayUrls-1"><span class="tsd-kind-call-signature">from<wbr/>Relay<wbr/>Urls</span><span class="tsd-signature-symbol">(</span><span class="tsd-kind-parameter">relayUrls</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">[]</span>, <span class="tsd-kind-parameter">ndk</span><span class="tsd-signature-symbol">: </span><a href="default.html" class="tsd-signature-type tsd-kind-class">default</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="NDKRelaySet.html" class="tsd-signature-type tsd-kind-class">NDKRelaySet</a><a href="#fromRelayUrls.fromRelayUrls-1" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24"><use href="#icon-anchor"></use></svg></a></li>
-<li class="tsd-description">
-<div class="tsd-comment tsd-typography"><p>Creates a relay set from a list of relay URLs.</p>
-<p>If no connection to the relay is found in the pool it will temporarily
-connect to it.</p>
-</div>
-<div class="tsd-parameters">
-<h4 class="tsd-parameters-title">Parameters</h4>
-<ul class="tsd-parameter-list">
-<li>
-<h5><span class="tsd-kind-parameter">relayUrls</span>: <span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">[]</span></h5>
-<div class="tsd-comment tsd-typography"><p>list of relay URLs to include in this set</p>
+<h5><span class="tsd-kind-parameter">user</span>: <a href="NDKUser.html" class="tsd-signature-type tsd-kind-class">NDKUser</a></h5>
+<div class="tsd-comment tsd-typography"><p>user to add</p>
 </div>
 <div class="tsd-comment tsd-typography"></div></li>
 <li>
-<h5><span class="tsd-kind-parameter">ndk</span>: <a href="default.html" class="tsd-signature-type tsd-kind-class">default</a></h5>
+<h5><span class="tsd-kind-parameter">opts</span>: <span class="tsd-signature-type ">AddUserOpts</span><span class="tsd-signature-symbol"> = ...</span></h5>
+<div class="tsd-comment tsd-typography"><p>options</p>
+</div>
 <div class="tsd-comment tsd-typography"></div></li></ul></div>
-<h4 class="tsd-returns-title">Returns <a href="NDKRelaySet.html" class="tsd-signature-type tsd-kind-class">NDKRelaySet</a></h4><p>NDKRelaySet</p>
-
+<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type ">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-symbol">{ </span><br/><span>    </span><span class="tsd-kind-property">addUserEvent</span><span class="tsd-signature-symbol">: </span><a href="NDKEvent.html" class="tsd-signature-type tsd-kind-class">NDKEvent</a><span class="tsd-signature-symbol">; </span><br/><span>    </span><span class="tsd-kind-property">currentUserListEvent</span><span class="tsd-signature-symbol">?: </span><a href="NDKEvent.html" class="tsd-signature-type tsd-kind-class">NDKEvent</a><span class="tsd-signature-symbol">; </span><br/><span class="tsd-signature-symbol">}</span><span class="tsd-signature-symbol">&gt;</span></h4>
 <div class="tsd-comment tsd-typography"></div><aside class="tsd-sources">
 <ul>
-<li>Defined in <a href="https://github.com/nostr-dev-kit/ndk/blob/4f982c4/ndk/src/relay/sets/index.ts#L40">packages/ndk/ndk/src/relay/sets/index.ts:40</a></li></ul></aside></li></ul></section></section></div>
+<li>Defined in <a href="https://github.com/nostr-dev-kit/ndk/blob/4f982c4/ndk/src/events/kinds/simple-group/index.ts#L48">packages/ndk/ndk/src/events/kinds/simple-group/index.ts:48</a></li></ul></aside></li></ul></section>
+<section class="tsd-panel tsd-member"><a id="getMemberListEvent" class="tsd-anchor"></a>
+<h3 class="tsd-anchor-link"><span>get<wbr/>Member<wbr/>List<wbr/>Event</span><a href="#getMemberListEvent" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24"><use href="#icon-anchor"></use></svg></a></h3>
+<ul class="tsd-signatures">
+<li class="tsd-signature tsd-anchor-link" id="getMemberListEvent.getMemberListEvent-1"><span class="tsd-kind-call-signature">get<wbr/>Member<wbr/>List<wbr/>Event</span><span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type ">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">null</span><span class="tsd-signature-symbol"> | </span><a href="NDKEvent.html" class="tsd-signature-type tsd-kind-class">NDKEvent</a><span class="tsd-signature-symbol">&gt;</span><a href="#getMemberListEvent.getMemberListEvent-1" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24"><use href="#icon-anchor"></use></svg></a></li>
+<li class="tsd-description">
+<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type ">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">null</span><span class="tsd-signature-symbol"> | </span><a href="NDKEvent.html" class="tsd-signature-type tsd-kind-class">NDKEvent</a><span class="tsd-signature-symbol">&gt;</span></h4><aside class="tsd-sources">
+<ul>
+<li>Defined in <a href="https://github.com/nostr-dev-kit/ndk/blob/4f982c4/ndk/src/events/kinds/simple-group/index.ts#L84">packages/ndk/ndk/src/events/kinds/simple-group/index.ts:84</a></li></ul></aside></li></ul></section>
+<section class="tsd-panel tsd-member"><a id="generateAddUserEvent" class="tsd-anchor"></a>
+<h3 class="tsd-anchor-link"><code class="tsd-tag ts-flagStatic">Static</code> <span>generate<wbr/>Add<wbr/>User<wbr/>Event</span><a href="#generateAddUserEvent" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24"><use href="#icon-anchor"></use></svg></a></h3>
+<ul class="tsd-signatures">
+<li class="tsd-signature tsd-anchor-link" id="generateAddUserEvent.generateAddUserEvent-1"><span class="tsd-kind-call-signature">generate<wbr/>Add<wbr/>User<wbr/>Event</span><span class="tsd-signature-symbol">(</span><span class="tsd-kind-parameter">userPubkey</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span>, <span class="tsd-kind-parameter">groupId</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span>, <span class="tsd-kind-parameter">alt</span><span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="NDKEvent.html" class="tsd-signature-type tsd-kind-class">NDKEvent</a><a href="#generateAddUserEvent.generateAddUserEvent-1" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24"><use href="#icon-anchor"></use></svg></a></li>
+<li class="tsd-description">
+<div class="tsd-comment tsd-typography"><p>Generates an event that adds a user to a group.</p>
+</div>
+<div class="tsd-parameters">
+<h4 class="tsd-parameters-title">Parameters</h4>
+<ul class="tsd-parameter-list">
+<li>
+<h5><span class="tsd-kind-parameter">userPubkey</span>: <span class="tsd-signature-type">string</span></h5>
+<div class="tsd-comment tsd-typography"><p>pubkey of the user to add</p>
+</div>
+<div class="tsd-comment tsd-typography"></div></li>
+<li>
+<h5><span class="tsd-kind-parameter">groupId</span>: <span class="tsd-signature-type">string</span></h5>
+<div class="tsd-comment tsd-typography"><p>group to add the user to</p>
+</div>
+<div class="tsd-comment tsd-typography"></div></li>
+<li>
+<h5><code class="tsd-tag ts-flagOptional">Optional</code> <span class="tsd-kind-parameter">alt</span>: <span class="tsd-signature-type">string</span></h5>
+<div class="tsd-comment tsd-typography"><p>optional description of the event</p>
+</div>
+<div class="tsd-comment tsd-typography"></div></li></ul></div>
+<h4 class="tsd-returns-title">Returns <a href="NDKEvent.html" class="tsd-signature-type tsd-kind-class">NDKEvent</a></h4>
+<div class="tsd-comment tsd-typography"></div><aside class="tsd-sources">
+<ul>
+<li>Defined in <a href="https://github.com/nostr-dev-kit/ndk/blob/4f982c4/ndk/src/events/kinds/simple-group/index.ts#L121">packages/ndk/ndk/src/events/kinds/simple-group/index.ts:121</a></li></ul></aside></li></ul></section>
+<section class="tsd-panel tsd-member"><a id="generateUserListEvent" class="tsd-anchor"></a>
+<h3 class="tsd-anchor-link"><code class="tsd-tag ts-flagStatic">Static</code> <span>generate<wbr/>User<wbr/>List<wbr/>Event</span><a href="#generateUserListEvent" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24"><use href="#icon-anchor"></use></svg></a></h3>
+<ul class="tsd-signatures">
+<li class="tsd-signature tsd-anchor-link" id="generateUserListEvent.generateUserListEvent-1"><span class="tsd-kind-call-signature">generate<wbr/>User<wbr/>List<wbr/>Event</span><span class="tsd-signature-symbol">(</span><span class="tsd-kind-parameter">groupId</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="NDKEvent.html" class="tsd-signature-type tsd-kind-class">NDKEvent</a><a href="#generateUserListEvent.generateUserListEvent-1" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24"><use href="#icon-anchor"></use></svg></a></li>
+<li class="tsd-description">
+<div class="tsd-comment tsd-typography"><p>Generates an event that lists the members of a group.</p>
+</div>
+<div class="tsd-parameters">
+<h4 class="tsd-parameters-title">Parameters</h4>
+<ul class="tsd-parameter-list">
+<li>
+<h5><span class="tsd-kind-parameter">groupId</span>: <span class="tsd-signature-type">string</span></h5>
+<div class="tsd-comment tsd-typography"></div></li></ul></div>
+<h4 class="tsd-returns-title">Returns <a href="NDKEvent.html" class="tsd-signature-type tsd-kind-class">NDKEvent</a></h4>
+<div class="tsd-comment tsd-typography"></div><aside class="tsd-sources">
+<ul>
+<li>Defined in <a href="https://github.com/nostr-dev-kit/ndk/blob/4f982c4/ndk/src/events/kinds/simple-group/index.ts#L102">packages/ndk/ndk/src/events/kinds/simple-group/index.ts:102</a></li></ul></aside></li></ul></section></section></div>
 <div class="col-sidebar">
 <div class="page-menu">
 <div class="tsd-navigation settings">
@@ -163,11 +170,12 @@ connect to it.</p>
 <div class="tsd-accordion-details">
 <ul>
 <li><a href="#constructor" class=""><svg class="tsd-kind-icon" viewBox="0 0 24 24"><use href="#icon-512"></use></svg><span>constructor</span></a></li>
-<li><a href="#relays" class=""><svg class="tsd-kind-icon" viewBox="0 0 24 24"><use href="#icon-1024"></use></svg><span>relays</span></a></li>
-<li><a href="#addRelay" class=""><svg class="tsd-kind-icon" viewBox="0 0 24 24"><use href="#icon-2048"></use></svg><span>add<wbr/>Relay</span></a></li>
-<li><a href="#publish" class=""><svg class="tsd-kind-icon" viewBox="0 0 24 24"><use href="#icon-2048"></use></svg><span>publish</span></a></li>
-<li><a href="#size" class=""><svg class="tsd-kind-icon" viewBox="0 0 24 24"><use href="#icon-2048"></use></svg><span>size</span></a></li>
-<li><a href="#fromRelayUrls" class=""><svg class="tsd-kind-icon" viewBox="0 0 24 24"><use href="#icon-2048"></use></svg><span>from<wbr/>Relay<wbr/>Urls</span></a></li></ul></div></details></div>
+<li><a href="#groupId" class=""><svg class="tsd-kind-icon" viewBox="0 0 24 24"><use href="#icon-1024"></use></svg><span>group<wbr/>Id</span></a></li>
+<li><a href="#relaySet" class=""><svg class="tsd-kind-icon" viewBox="0 0 24 24"><use href="#icon-1024"></use></svg><span>relay<wbr/>Set</span></a></li>
+<li><a href="#addUser" class=""><svg class="tsd-kind-icon" viewBox="0 0 24 24"><use href="#icon-2048"></use></svg><span>add<wbr/>User</span></a></li>
+<li><a href="#getMemberListEvent" class=""><svg class="tsd-kind-icon" viewBox="0 0 24 24"><use href="#icon-2048"></use></svg><span>get<wbr/>Member<wbr/>List<wbr/>Event</span></a></li>
+<li><a href="#generateAddUserEvent" class=""><svg class="tsd-kind-icon" viewBox="0 0 24 24"><use href="#icon-2048"></use></svg><span>generate<wbr/>Add<wbr/>User<wbr/>Event</span></a></li>
+<li><a href="#generateUserListEvent" class=""><svg class="tsd-kind-icon" viewBox="0 0 24 24"><use href="#icon-2048"></use></svg><span>generate<wbr/>User<wbr/>List<wbr/>Event</span></a></li></ul></div></details></div>
 <div class="site-menu">
 <nav class="tsd-navigation"><a href="../modules.html"><svg class="tsd-kind-icon" viewBox="0 0 24 24"><use href="#icon-1"></use></svg><span>NDK</span></a>
 <ul class="tsd-small-nested-navigation" id="tsd-nav-container" data-base="..">
