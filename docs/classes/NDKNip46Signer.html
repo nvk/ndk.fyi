@@ -23,6 +23,9 @@ This class is meant to be used client-side, paired with the NDKNip46Backend or a
 <h4>Emits</h4><p>authUrl -- Emitted when the user should take an action in certain URL.
                   When a client receives this event, it should direct the user
                   to go to that URL to authorize the application.</p>
+
+<h4>Example</h4><pre><code class="language-ts"><span class="hl-5">Connect</span><span class="hl-1"> </span><span class="hl-5">using</span><span class="hl-1"> </span><span class="hl-5">a</span><span class="hl-1"> </span><span class="hl-4">NIP</span><span class="hl-1">-</span><span class="hl-8">05</span><span class="hl-1"> </span><span class="hl-5">address</span><br/><span class="hl-3">const</span><span class="hl-1"> </span><span class="hl-4">ndk</span><span class="hl-1"> = </span><span class="hl-3">new</span><span class="hl-1"> </span><span class="hl-0">NDK</span><span class="hl-1">()</span><br/><span class="hl-3">const</span><span class="hl-1"> </span><span class="hl-4">nip05</span><span class="hl-1"> = </span><span class="hl-7">await</span><span class="hl-1"> </span><span class="hl-0">prompt</span><span class="hl-1">(</span><span class="hl-2">&quot;enter your nip-05&quot;</span><span class="hl-1">)</span><br/><span class="hl-3">const</span><span class="hl-1"> </span><span class="hl-4">privateKey</span><span class="hl-1"> = </span><span class="hl-5">localStorage</span><span class="hl-1">.</span><span class="hl-0">getItem</span><span class="hl-1">(</span><span class="hl-2">&quot;nip46-local-key&quot;</span><span class="hl-1">)</span><br/><span class="hl-3">const</span><span class="hl-1"> </span><span class="hl-4">signer</span><span class="hl-1"> = </span><span class="hl-3">new</span><span class="hl-1"> </span><span class="hl-0">NDKNip46Signer</span><span class="hl-1">(</span><span class="hl-5">ndk</span><span class="hl-1">, </span><span class="hl-5">nip05</span><span class="hl-1">, </span><span class="hl-5">privateKey</span><span class="hl-1">)</span><br/><br/><span class="hl-6">// Save generated private key for future use</span><br/><span class="hl-5">localStorage</span><span class="hl-1">.</span><span class="hl-0">setItem</span><span class="hl-1">(</span><span class="hl-2">&quot;nip46-local-key&quot;</span><span class="hl-1">, </span><span class="hl-5">signer</span><span class="hl-1">.</span><span class="hl-5">localSigner</span><span class="hl-1">.</span><span class="hl-5">privateKey</span><span class="hl-1">)</span><br/><br/><span class="hl-6">// If the backend sends an auth_url event, open that URL as a popup so the user can authorize the app</span><br/><span class="hl-5">signer</span><span class="hl-1">.</span><span class="hl-0">on</span><span class="hl-1">(</span><span class="hl-2">&quot;authUrl&quot;</span><span class="hl-1">, (</span><span class="hl-5">url</span><span class="hl-1">) </span><span class="hl-3">=&gt;</span><span class="hl-1"> { </span><span class="hl-5">window</span><span class="hl-1">.</span><span class="hl-0">open</span><span class="hl-1">(</span><span class="hl-5">url</span><span class="hl-1">, </span><span class="hl-2">&quot;auth&quot;</span><span class="hl-1">, </span><span class="hl-2">&quot;width=600,height=600&quot;</span><span class="hl-1">) })</span><br/><br/><span class="hl-6">// wait until the signer is ready</span><br/><span class="hl-3">const</span><span class="hl-1"> </span><span class="hl-4">loggedinUser</span><span class="hl-1"> = </span><span class="hl-7">await</span><span class="hl-1"> </span><span class="hl-5">signer</span><span class="hl-1">.</span><span class="hl-0">blockUntilReady</span><span class="hl-1">()</span><br/><br/><span class="hl-0">alert</span><span class="hl-1">(</span><span class="hl-2">&quot;You are now logged in as &quot;</span><span class="hl-1"> + </span><span class="hl-5">loggedinUser</span><span class="hl-1">.</span><span class="hl-5">npub</span><span class="hl-1">)</span>
+</code><button>Copy</button></pre>
 </div></section>
 <section class="tsd-panel tsd-hierarchy">
 <h4>Hierarchy</h4>
@@ -35,7 +38,7 @@ This class is meant to be used client-side, paired with the NDKNip46Backend or a
 <ul class="tsd-hierarchy">
 <li><a href="../interfaces/NDKSigner.html" class="tsd-signature-type tsd-kind-interface">NDKSigner</a></li></ul></section><aside class="tsd-sources">
 <ul>
-<li>Defined in <a href="https://github.com/nostr-dev-kit/ndk/blob/4f982c4/ndk/src/signers/nip46/index.ts#L19">packages/ndk/ndk/src/signers/nip46/index.ts:19</a></li></ul></aside>
+<li>Defined in <a href="https://github.com/nostr-dev-kit/ndk/blob/15882ed/ndk/src/signers/nip46/index.ts#L36">packages/ndk/ndk/src/signers/nip46/index.ts:36</a></li></ul></aside>
 <section class="tsd-panel-group tsd-index-group">
 <section class="tsd-panel tsd-index-panel">
 <details class="tsd-index-content tsd-index-accordion" open><summary class="tsd-accordion-summary tsd-index-summary">
@@ -48,6 +51,7 @@ This class is meant to be used client-side, paired with the NDKNip46Backend or a
 <section class="tsd-index-section">
 <h3 class="tsd-index-heading">Properties</h3>
 <div class="tsd-index-list"><a href="NDKNip46Signer.html#localSigner" class="tsd-index-link"><svg class="tsd-kind-icon" viewBox="0 0 24 24"><use href="#icon-1024"></use></svg><span>local<wbr/>Signer</span></a>
+<a href="NDKNip46Signer.html#relayUrls" class="tsd-index-link"><svg class="tsd-kind-icon" viewBox="0 0 24 24"><use href="#icon-1024"></use></svg><span>relay<wbr/>Urls</span></a>
 <a href="NDKNip46Signer.html#remotePubkey" class="tsd-index-link"><svg class="tsd-kind-icon" viewBox="0 0 24 24"><use href="#icon-1024"></use></svg><span>remote<wbr/>Pubkey</span></a>
 <a href="NDKNip46Signer.html#remoteUser" class="tsd-index-link"><svg class="tsd-kind-icon" viewBox="0 0 24 24"><use href="#icon-1024"></use></svg><span>remote<wbr/>User</span></a>
 <a href="NDKNip46Signer.html#rpc" class="tsd-index-link"><svg class="tsd-kind-icon" viewBox="0 0 24 24"><use href="#icon-1024"></use></svg><span>rpc</span></a>
@@ -91,7 +95,7 @@ This class is meant to be used client-side, paired with the NDKNip46Backend or a
 <div class="tsd-comment tsd-typography"></div><aside class="tsd-sources">
 <p>Overrides EventEmitter.constructor</p>
 <ul>
-<li>Defined in <a href="https://github.com/nostr-dev-kit/ndk/blob/4f982c4/ndk/src/signers/nip46/index.ts#L34">packages/ndk/ndk/src/signers/nip46/index.ts:34</a></li></ul></aside></li>
+<li>Defined in <a href="https://github.com/nostr-dev-kit/ndk/blob/15882ed/ndk/src/signers/nip46/index.ts#L52">packages/ndk/ndk/src/signers/nip46/index.ts:52</a></li></ul></aside></li>
 <li class="tsd-signature tsd-anchor-link" id="constructor.new_NDKNip46Signer-1"><span class="tsd-kind-constructor-signature">new NDKNip46<wbr/>Signer</span><span class="tsd-signature-symbol">(</span><span class="tsd-kind-parameter">ndk</span><span class="tsd-signature-symbol">: </span><a href="default.html" class="tsd-signature-type tsd-kind-class">default</a>, <span class="tsd-kind-parameter">remoteNpub</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span>, <span class="tsd-kind-parameter">localSigner</span><span class="tsd-signature-symbol">?: </span><a href="../interfaces/NDKSigner.html" class="tsd-signature-type tsd-kind-interface">NDKSigner</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="NDKNip46Signer.html" class="tsd-signature-type tsd-kind-class">NDKNip46Signer</a><a href="#constructor.new_NDKNip46Signer-1" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24"><use href="#icon-anchor"></use></svg></a></li>
 <li class="tsd-description">
 <div class="tsd-parameters">
@@ -116,7 +120,7 @@ This class is meant to be used client-side, paired with the NDKNip46Backend or a
 <div class="tsd-comment tsd-typography"></div><aside class="tsd-sources">
 <p>Overrides EventEmitter.constructor</p>
 <ul>
-<li>Defined in <a href="https://github.com/nostr-dev-kit/ndk/blob/4f982c4/ndk/src/signers/nip46/index.ts#L41">packages/ndk/ndk/src/signers/nip46/index.ts:41</a></li></ul></aside></li>
+<li>Defined in <a href="https://github.com/nostr-dev-kit/ndk/blob/15882ed/ndk/src/signers/nip46/index.ts#L59">packages/ndk/ndk/src/signers/nip46/index.ts:59</a></li></ul></aside></li>
 <li class="tsd-signature tsd-anchor-link" id="constructor.new_NDKNip46Signer-2"><span class="tsd-kind-constructor-signature">new NDKNip46<wbr/>Signer</span><span class="tsd-signature-symbol">(</span><span class="tsd-kind-parameter">ndk</span><span class="tsd-signature-symbol">: </span><a href="default.html" class="tsd-signature-type tsd-kind-class">default</a>, <span class="tsd-kind-parameter">remoteNip05</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span>, <span class="tsd-kind-parameter">localSigner</span><span class="tsd-signature-symbol">?: </span><a href="../interfaces/NDKSigner.html" class="tsd-signature-type tsd-kind-interface">NDKSigner</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="NDKNip46Signer.html" class="tsd-signature-type tsd-kind-class">NDKNip46Signer</a><a href="#constructor.new_NDKNip46Signer-2" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24"><use href="#icon-anchor"></use></svg></a></li>
 <li class="tsd-description">
 <div class="tsd-parameters">
@@ -141,7 +145,7 @@ This class is meant to be used client-side, paired with the NDKNip46Backend or a
 <div class="tsd-comment tsd-typography"></div><aside class="tsd-sources">
 <p>Overrides EventEmitter.constructor</p>
 <ul>
-<li>Defined in <a href="https://github.com/nostr-dev-kit/ndk/blob/4f982c4/ndk/src/signers/nip46/index.ts#L48">packages/ndk/ndk/src/signers/nip46/index.ts:48</a></li></ul></aside></li>
+<li>Defined in <a href="https://github.com/nostr-dev-kit/ndk/blob/15882ed/ndk/src/signers/nip46/index.ts#L66">packages/ndk/ndk/src/signers/nip46/index.ts:66</a></li></ul></aside></li>
 <li class="tsd-signature tsd-anchor-link" id="constructor.new_NDKNip46Signer-3"><span class="tsd-kind-constructor-signature">new NDKNip46<wbr/>Signer</span><span class="tsd-signature-symbol">(</span><span class="tsd-kind-parameter">ndk</span><span class="tsd-signature-symbol">: </span><a href="default.html" class="tsd-signature-type tsd-kind-class">default</a>, <span class="tsd-kind-parameter">remotePubkey</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span>, <span class="tsd-kind-parameter">localSigner</span><span class="tsd-signature-symbol">?: </span><a href="../interfaces/NDKSigner.html" class="tsd-signature-type tsd-kind-interface">NDKSigner</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="NDKNip46Signer.html" class="tsd-signature-type tsd-kind-class">NDKNip46Signer</a><a href="#constructor.new_NDKNip46Signer-3" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24"><use href="#icon-anchor"></use></svg></a></li>
 <li class="tsd-description">
 <div class="tsd-parameters">
@@ -166,34 +170,39 @@ This class is meant to be used client-side, paired with the NDKNip46Backend or a
 <div class="tsd-comment tsd-typography"></div><aside class="tsd-sources">
 <p>Overrides EventEmitter.constructor</p>
 <ul>
-<li>Defined in <a href="https://github.com/nostr-dev-kit/ndk/blob/4f982c4/ndk/src/signers/nip46/index.ts#L55">packages/ndk/ndk/src/signers/nip46/index.ts:55</a></li></ul></aside></li></ul></section></section>
+<li>Defined in <a href="https://github.com/nostr-dev-kit/ndk/blob/15882ed/ndk/src/signers/nip46/index.ts#L73">packages/ndk/ndk/src/signers/nip46/index.ts:73</a></li></ul></aside></li></ul></section></section>
 <section class="tsd-panel-group tsd-member-group">
 <h2>Properties</h2>
 <section class="tsd-panel tsd-member"><a id="localSigner" class="tsd-anchor"></a>
 <h3 class="tsd-anchor-link"><span>local<wbr/>Signer</span><a href="#localSigner" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24"><use href="#icon-anchor"></use></svg></a></h3>
 <div class="tsd-signature"><span class="tsd-kind-property">local<wbr/>Signer</span><span class="tsd-signature-symbol">:</span> <a href="../interfaces/NDKSigner.html" class="tsd-signature-type tsd-kind-interface">NDKSigner</a></div><aside class="tsd-sources">
 <ul>
-<li>Defined in <a href="https://github.com/nostr-dev-kit/ndk/blob/4f982c4/ndk/src/signers/nip46/index.ts#L24">packages/ndk/ndk/src/signers/nip46/index.ts:24</a></li></ul></aside></section>
+<li>Defined in <a href="https://github.com/nostr-dev-kit/ndk/blob/15882ed/ndk/src/signers/nip46/index.ts#L41">packages/ndk/ndk/src/signers/nip46/index.ts:41</a></li></ul></aside></section>
+<section class="tsd-panel tsd-member"><a id="relayUrls" class="tsd-anchor"></a>
+<h3 class="tsd-anchor-link"><span>relay<wbr/>Urls</span><a href="#relayUrls" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24"><use href="#icon-anchor"></use></svg></a></h3>
+<div class="tsd-signature"><span class="tsd-kind-property">relay<wbr/>Urls</span><span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol"> = []</span></div><aside class="tsd-sources">
+<ul>
+<li>Defined in <a href="https://github.com/nostr-dev-kit/ndk/blob/15882ed/ndk/src/signers/nip46/index.ts#L45">packages/ndk/ndk/src/signers/nip46/index.ts:45</a></li></ul></aside></section>
 <section class="tsd-panel tsd-member"><a id="remotePubkey" class="tsd-anchor"></a>
 <h3 class="tsd-anchor-link"><span>remote<wbr/>Pubkey</span><a href="#remotePubkey" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24"><use href="#icon-anchor"></use></svg></a></h3>
 <div class="tsd-signature"><span class="tsd-kind-property">remote<wbr/>Pubkey</span><span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">string</span></div><aside class="tsd-sources">
 <ul>
-<li>Defined in <a href="https://github.com/nostr-dev-kit/ndk/blob/4f982c4/ndk/src/signers/nip46/index.ts#L22">packages/ndk/ndk/src/signers/nip46/index.ts:22</a></li></ul></aside></section>
+<li>Defined in <a href="https://github.com/nostr-dev-kit/ndk/blob/15882ed/ndk/src/signers/nip46/index.ts#L39">packages/ndk/ndk/src/signers/nip46/index.ts:39</a></li></ul></aside></section>
 <section class="tsd-panel tsd-member"><a id="remoteUser" class="tsd-anchor"></a>
 <h3 class="tsd-anchor-link"><span>remote<wbr/>User</span><a href="#remoteUser" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24"><use href="#icon-anchor"></use></svg></a></h3>
 <div class="tsd-signature"><span class="tsd-kind-property">remote<wbr/>User</span><span class="tsd-signature-symbol">:</span> <a href="NDKUser.html" class="tsd-signature-type tsd-kind-class">NDKUser</a></div><aside class="tsd-sources">
 <ul>
-<li>Defined in <a href="https://github.com/nostr-dev-kit/ndk/blob/4f982c4/ndk/src/signers/nip46/index.ts#L21">packages/ndk/ndk/src/signers/nip46/index.ts:21</a></li></ul></aside></section>
+<li>Defined in <a href="https://github.com/nostr-dev-kit/ndk/blob/15882ed/ndk/src/signers/nip46/index.ts#L38">packages/ndk/ndk/src/signers/nip46/index.ts:38</a></li></ul></aside></section>
 <section class="tsd-panel tsd-member"><a id="rpc" class="tsd-anchor"></a>
 <h3 class="tsd-anchor-link"><span>rpc</span><a href="#rpc" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24"><use href="#icon-anchor"></use></svg></a></h3>
 <div class="tsd-signature"><span class="tsd-kind-property">rpc</span><span class="tsd-signature-symbol">:</span> <a href="NDKNostrRpc.html" class="tsd-signature-type tsd-kind-class">NDKNostrRpc</a></div><aside class="tsd-sources">
 <ul>
-<li>Defined in <a href="https://github.com/nostr-dev-kit/ndk/blob/4f982c4/ndk/src/signers/nip46/index.ts#L26">packages/ndk/ndk/src/signers/nip46/index.ts:26</a></li></ul></aside></section>
+<li>Defined in <a href="https://github.com/nostr-dev-kit/ndk/blob/15882ed/ndk/src/signers/nip46/index.ts#L43">packages/ndk/ndk/src/signers/nip46/index.ts:43</a></li></ul></aside></section>
 <section class="tsd-panel tsd-member"><a id="token" class="tsd-anchor"></a>
 <h3 class="tsd-anchor-link"><span>token</span><a href="#token" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24"><use href="#icon-anchor"></use></svg></a></h3>
 <div class="tsd-signature"><span class="tsd-kind-property">token</span><span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">string</span></div><aside class="tsd-sources">
 <ul>
-<li>Defined in <a href="https://github.com/nostr-dev-kit/ndk/blob/4f982c4/ndk/src/signers/nip46/index.ts#L23">packages/ndk/ndk/src/signers/nip46/index.ts:23</a></li></ul></aside></section></section>
+<li>Defined in <a href="https://github.com/nostr-dev-kit/ndk/blob/15882ed/ndk/src/signers/nip46/index.ts#L40">packages/ndk/ndk/src/signers/nip46/index.ts:40</a></li></ul></aside></section></section>
 <section class="tsd-panel-group tsd-member-group">
 <h2>Methods</h2>
 <section class="tsd-panel tsd-member"><a id="blockUntilReady" class="tsd-anchor"></a>
@@ -208,7 +217,7 @@ This class is meant to be used client-side, paired with the NDKNip46Backend or a
 <div class="tsd-comment tsd-typography"></div><aside class="tsd-sources">
 <p>Implementation of <a href="../interfaces/NDKSigner.html">NDKSigner</a>.<a href="../interfaces/NDKSigner.html#blockUntilReady">blockUntilReady</a></p>
 <ul>
-<li>Defined in <a href="https://github.com/nostr-dev-kit/ndk/blob/4f982c4/ndk/src/signers/nip46/index.ts#L116">packages/ndk/ndk/src/signers/nip46/index.ts:116</a></li></ul></aside></li></ul></section>
+<li>Defined in <a href="https://github.com/nostr-dev-kit/ndk/blob/15882ed/ndk/src/signers/nip46/index.ts#L134">packages/ndk/ndk/src/signers/nip46/index.ts:134</a></li></ul></aside></li></ul></section>
 <section class="tsd-panel tsd-member"><a id="createAccount" class="tsd-anchor"></a>
 <h3 class="tsd-anchor-link"><span>create<wbr/>Account</span><a href="#createAccount" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24"><use href="#icon-anchor"></use></svg></a></h3>
 <ul class="tsd-signatures">
@@ -238,7 +247,7 @@ This class is meant to be used client-side, paired with the NDKNip46Backend or a
 
 <div class="tsd-comment tsd-typography"></div><aside class="tsd-sources">
 <ul>
-<li>Defined in <a href="https://github.com/nostr-dev-kit/ndk/blob/4f982c4/ndk/src/signers/nip46/index.ts#L237">packages/ndk/ndk/src/signers/nip46/index.ts:237</a></li></ul></aside></li></ul></section>
+<li>Defined in <a href="https://github.com/nostr-dev-kit/ndk/blob/15882ed/ndk/src/signers/nip46/index.ts#L256">packages/ndk/ndk/src/signers/nip46/index.ts:256</a></li></ul></aside></li></ul></section>
 <section class="tsd-panel tsd-member"><a id="decrypt" class="tsd-anchor"></a>
 <h3 class="tsd-anchor-link"><span>decrypt</span><a href="#decrypt" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24"><use href="#icon-anchor"></use></svg></a></h3>
 <ul class="tsd-signatures">
@@ -258,7 +267,7 @@ This class is meant to be used client-side, paired with the NDKNip46Backend or a
 <div class="tsd-comment tsd-typography"></div><aside class="tsd-sources">
 <p>Implementation of <a href="../interfaces/NDKSigner.html">NDKSigner</a>.<a href="../interfaces/NDKSigner.html#decrypt">decrypt</a></p>
 <ul>
-<li>Defined in <a href="https://github.com/nostr-dev-kit/ndk/blob/4f982c4/ndk/src/signers/nip46/index.ts#L183">packages/ndk/ndk/src/signers/nip46/index.ts:183</a></li></ul></aside></li></ul></section>
+<li>Defined in <a href="https://github.com/nostr-dev-kit/ndk/blob/15882ed/ndk/src/signers/nip46/index.ts#L202">packages/ndk/ndk/src/signers/nip46/index.ts:202</a></li></ul></aside></li></ul></section>
 <section class="tsd-panel tsd-member"><a id="encrypt" class="tsd-anchor"></a>
 <h3 class="tsd-anchor-link"><span>encrypt</span><a href="#encrypt" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24"><use href="#icon-anchor"></use></svg></a></h3>
 <ul class="tsd-signatures">
@@ -283,7 +292,7 @@ This class is meant to be used client-side, paired with the NDKNip46Backend or a
 <div class="tsd-comment tsd-typography"></div><aside class="tsd-sources">
 <p>Implementation of <a href="../interfaces/NDKSigner.html">NDKSigner</a>.<a href="../interfaces/NDKSigner.html#encrypt">encrypt</a></p>
 <ul>
-<li>Defined in <a href="https://github.com/nostr-dev-kit/ndk/blob/4f982c4/ndk/src/signers/nip46/index.ts#L161">packages/ndk/ndk/src/signers/nip46/index.ts:161</a></li></ul></aside></li></ul></section>
+<li>Defined in <a href="https://github.com/nostr-dev-kit/ndk/blob/15882ed/ndk/src/signers/nip46/index.ts#L180">packages/ndk/ndk/src/signers/nip46/index.ts:180</a></li></ul></aside></li></ul></section>
 <section class="tsd-panel tsd-member"><a id="sign" class="tsd-anchor"></a>
 <h3 class="tsd-anchor-link"><span>sign</span><a href="#sign" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24"><use href="#icon-anchor"></use></svg></a></h3>
 <ul class="tsd-signatures">
@@ -304,7 +313,7 @@ This class is meant to be used client-side, paired with the NDKNip46Backend or a
 <div class="tsd-comment tsd-typography"></div><aside class="tsd-sources">
 <p>Implementation of <a href="../interfaces/NDKSigner.html">NDKSigner</a>.<a href="../interfaces/NDKSigner.html#sign">sign</a></p>
 <ul>
-<li>Defined in <a href="https://github.com/nostr-dev-kit/ndk/blob/4f982c4/ndk/src/signers/nip46/index.ts#L206">packages/ndk/ndk/src/signers/nip46/index.ts:206</a></li></ul></aside></li></ul></section>
+<li>Defined in <a href="https://github.com/nostr-dev-kit/ndk/blob/15882ed/ndk/src/signers/nip46/index.ts#L225">packages/ndk/ndk/src/signers/nip46/index.ts:225</a></li></ul></aside></li></ul></section>
 <section class="tsd-panel tsd-member"><a id="user" class="tsd-anchor"></a>
 <h3 class="tsd-anchor-link"><span>user</span><a href="#user" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24"><use href="#icon-anchor"></use></svg></a></h3>
 <ul class="tsd-signatures">
@@ -316,7 +325,7 @@ This class is meant to be used client-side, paired with the NDKNip46Backend or a
 <div class="tsd-comment tsd-typography"></div><aside class="tsd-sources">
 <p>Implementation of <a href="../interfaces/NDKSigner.html">NDKSigner</a>.<a href="../interfaces/NDKSigner.html#user">user</a></p>
 <ul>
-<li>Defined in <a href="https://github.com/nostr-dev-kit/ndk/blob/4f982c4/ndk/src/signers/nip46/index.ts#L112">packages/ndk/ndk/src/signers/nip46/index.ts:112</a></li></ul></aside></li></ul></section></section></div>
+<li>Defined in <a href="https://github.com/nostr-dev-kit/ndk/blob/15882ed/ndk/src/signers/nip46/index.ts#L130">packages/ndk/ndk/src/signers/nip46/index.ts:130</a></li></ul></aside></li></ul></section></section></div>
 <div class="col-sidebar">
 <div class="page-menu">
 <div class="tsd-navigation settings">
@@ -335,6 +344,7 @@ This class is meant to be used client-side, paired with the NDKNip46Backend or a
 <ul>
 <li><a href="#constructor" class=""><svg class="tsd-kind-icon" viewBox="0 0 24 24"><use href="#icon-512"></use></svg><span>constructor</span></a></li>
 <li><a href="#localSigner" class=""><svg class="tsd-kind-icon" viewBox="0 0 24 24"><use href="#icon-1024"></use></svg><span>local<wbr/>Signer</span></a></li>
+<li><a href="#relayUrls" class=""><svg class="tsd-kind-icon" viewBox="0 0 24 24"><use href="#icon-1024"></use></svg><span>relay<wbr/>Urls</span></a></li>
 <li><a href="#remotePubkey" class=""><svg class="tsd-kind-icon" viewBox="0 0 24 24"><use href="#icon-1024"></use></svg><span>remote<wbr/>Pubkey</span></a></li>
 <li><a href="#remoteUser" class=""><svg class="tsd-kind-icon" viewBox="0 0 24 24"><use href="#icon-1024"></use></svg><span>remote<wbr/>User</span></a></li>
 <li><a href="#rpc" class=""><svg class="tsd-kind-icon" viewBox="0 0 24 24"><use href="#icon-1024"></use></svg><span>rpc</span></a></li>
